@@ -124,7 +124,7 @@ const ContactMe = () => {
             <FontAwesomeIcon className="icon" icon={faComment} />
             <textarea name="message" placeholder="message" />
           </div>
-          <button ref={sendFormBtn} class="sendFormBtn">
+          <button ref={sendFormBtn} className="sendFormBtn">
             Send
           </button>
         </form>
