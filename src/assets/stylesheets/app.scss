@@ -1,0 +1,177 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font: normal 16px "Roboto Mono", monospace;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  z-index: 3;
+
+  .greetingSvg {
+    position: relative;
+    right: 2.5%;
+    height: 80vh;
+    width: 100%;
+    background: black;
+
+    .greeting {
+      fill: black;
+      stroke: white;
+      stroke-width: 1;
+      stroke-dasharray: 250;
+      stroke-dashoffset: 250;
+    }
+
+    .name {
+      fill: black;
+      stroke: white;
+      stroke-width: 1;
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+    }
+  }
+
+  .startBtn {
+    position: relative;
+    border: 2px solid white;
+    top: -12.5%;
+    border-radius: 5px;
+    padding: 1rem;
+    color: white;
+    opacity: 0;
+
+    &:hover {
+      background: white;
+      border: 2px solid rgb(71, 71, 71);
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  .codeIcon {
+    z-index: 4;
+    position: absolute;
+    height: 20vh;
+    width: 25%;
+    background: black;
+    stroke: white;
+    stroke-width: 8;
+  }
+
+  .cssSvg {
+    top: 15vh;
+    left: 0;
+  }
+
+  .htmlSvg {
+    top: 15vh;
+    right: 0;
+  }
+
+  .jsSvg {
+    bottom: 15vh;
+    left: 0;
+  }
+
+  .reactSvg {
+    bottom: 15vh;
+    right: 0;
+  }
+}
+
+.overlay1 {
+  background: white;
+  z-index: 2;
+}
+
+.overlay2 {
+  background: rgb(155, 154, 154);
+  z-index: 1;
+}
+
+#portfolio {
+  display: none;
+  flex-direction: column;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@import "./partials/portfolio";
+@import "./partials/home";
+@import "./partials/projects";
+@import "./partials/contactMe";
+@import "./partials/footer";
+
+// Media Queries
+@media only screen and (max-width: 950px) {
+  .landing {
+    .greetingSvg {
+      height: 60vh;
+      width: 80%;
+    }
+    .codeIcon {
+      height: 17.5vh;
+      width: 22.5%;
+      stroke-width: 8;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .landing {
+    .codeIcon {
+      height: 15vh;
+      width: 20%;
+      stroke-width: 8;
+    }
+
+    .cssSvg {
+      left: 10vw;
+    }
+
+    .htmlSvg {
+      right: 10vw;
+    }
+
+    .jsSvg {
+      bottom: 10vh;
+      left: 10vw;
+    }
+
+    .reactSvg {
+      bottom: 10vh;
+      right: 10vw;
+    }
+  }
+}

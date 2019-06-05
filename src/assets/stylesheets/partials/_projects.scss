@@ -1,0 +1,28 @@
+#projects {
+  height: 80vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5px;
+  display: grid;
+  overflow: hidden;
+
+  .project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(211, 211, 211);
+  }
+
+  @import "./project1";
+  @import "./project2";
+}
+
+// Media Queries
+@media only screen and (max-width: 600px) {
+  #projects {
+    height: 90vh;
+    grid-template-columns: 1fr;
+  }
+}

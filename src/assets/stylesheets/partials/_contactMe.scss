@@ -1,0 +1,277 @@
+#contactMe {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(26, 25, 25);
+
+  .openFormBtn {
+    all: unset;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 20vw;
+    background: rgb(244, 83, 66);
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+
+    &:before {
+      left: -36vw;
+    }
+
+    &:after {
+      left: 21vw;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: rgb(211, 54, 36);
+    }
+  }
+
+  .contactFormContainer {
+    opacity: 0;
+    position: relative;
+    height: 85%;
+    width: 45%;
+    left: -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(244, 83, 66);
+    border: 1px solid grey;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+
+    .mailIconContainer {
+      height: 90%;
+      width: 90%;
+      opacity: 0;
+      z-index: -1;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid white;
+      border-radius: 10px;
+
+      .mailIcon {
+        font-size: 25rem;
+        padding: 5rem;
+      }
+    }
+
+    form {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      position: relative;
+
+      input,
+      textarea,
+      a {
+        all: unset;
+        font-size: 1rem;
+        padding: 5px;
+        background: white;
+        color: black;
+        border: 1.25px solid black;
+        border-radius: 5px;
+      }
+
+      .inputGroup {
+        height: 10%;
+        width: 80%;
+        margin: 3% 0;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          width: 12.5%;
+          font-size: 1.5rem;
+        }
+
+        input {
+          height: 100%;
+          width: 75%;
+        }
+      }
+
+      .textGroup {
+        height: 25%;
+        width: 80%;
+        display: flex;
+        margin: 3% 0;
+        align-items: center;
+
+        .icon {
+          width: 10%;
+          font-size: 2rem;
+        }
+
+        textarea {
+          height: 100%;
+          width: 80%;
+        }
+      }
+
+      .sendFormBtn {
+        position: relative;
+        background: rgb(242, 242, 242);
+        width: 40%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 2.5px rgba(136, 136, 136, 0.3);
+
+        &:hover {
+          cursor: pointer;
+          top: 1px;
+          box-shadow: 0px 1.5px rgba(136, 136, 136, 0.15);
+        }
+
+        &:active {
+          top: 2.5px;
+          box-shadow: 0px 0px rgba(136, 136, 136, 0.15);
+        }
+      }
+    }
+
+    .postSubmitMessage {
+      position: absolute;
+      color: white;
+      height: 90%;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 3rem;
+      border: 2px solid lightgrey;
+      border-radius: 10px;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+
+  .socialMedia {
+    height: 85%;
+    width: 20%;
+    position: relative;
+    left: 3.5rem;
+
+    .icon {
+      stroke-width: 0.2rem;
+      stroke: white;
+      z-index: 2;
+      opacity: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .line {
+      stroke-width: 0.3rem;
+      stroke: white;
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+    }
+
+    .facebook {
+      fill: rgb(59, 89, 152);
+    }
+
+    .gmail {
+      fill: rgb(234, 67, 53);
+    }
+
+    .codepen {
+      fill: white;
+    }
+
+    .linkedin {
+      fill: rgb(0, 160, 220);
+    }
+
+    .github {
+      fill: rgb(83, 82, 82);
+    }
+  }
+}
+
+// Media Queries
+@media only screen and (max-width: 950px) {
+  #contactMe {
+    .openFormBtn {
+      height: 15vh;
+      width: 30vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #contactMe {
+    .contactFormContainer {
+      height: 85%;
+      width: 75%;
+    }
+
+    .socialMedia {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #contactMe {
+    .openFormBtn {
+      height: 15vh;
+      width: 70vw;
+    }
+
+    .contactFormContainer {
+      height: 75%;
+      width: 95%;
+
+      form {
+        input,
+        textarea,
+        a {
+          font-size: 1.5rem;
+          padding: 7.5px;
+        }
+
+        .inputGroup {
+          margin: 7% 0;
+
+          .icon {
+            position: relative;
+            right: 7.5%;
+            font-size: 2rem;
+          }
+        }
+
+        .textGroup {
+          margin: 7% 0;
+
+          .icon {
+            position: relative;
+            right: 7.5%;
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

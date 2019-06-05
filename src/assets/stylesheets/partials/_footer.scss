@@ -1,0 +1,84 @@
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100vw;
+  background: rgb(211, 211, 211);
+
+  h3,
+  h5 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1.15rem;
+
+    a {
+      text-decoration: none;
+      color: rgb(87, 86, 86);
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        color: rgb(244, 83, 66);
+      }
+    }
+  }
+
+  .socialMedia {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .link {
+      margin: 0 0.5rem;
+    }
+
+    .icon {
+      font-size: 3rem;
+
+      &:hover {
+        font-size: 3.25rem;
+      }
+    }
+
+    .facebook {
+      fill: rgb(59, 89, 152);
+    }
+
+    .gmail {
+      fill: rgb(234, 67, 53);
+    }
+
+    .codepen {
+      fill: white;
+    }
+
+    .linkedin {
+      fill: rgb(0, 160, 220);
+    }
+
+    .github {
+      fill: rgb(83, 82, 82);
+    }
+  }
+}
+
+// Media Queries
+@media only screen and (min-width: 700px) {
+  #footer {
+    .socialMedia {
+      display: none;
+    }
+  }
+}

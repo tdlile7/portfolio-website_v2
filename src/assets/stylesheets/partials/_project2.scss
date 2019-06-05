@@ -1,0 +1,95 @@
+.project {
+  &:nth-child(2) {
+    background: rgb(117, 116, 116);
+
+    .note {
+      width: 50%;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 25%;
+      text-align: center;
+      color: white;
+      background: black;
+    }
+
+    .projectTitle {
+      margin-bottom: 0.5rem;
+    }
+
+    > p {
+      width: 80%;
+      font-size: 1.15rem;
+      margin: 1.5rem 0;
+
+      span,
+      pre {
+        font-weight: bold;
+      }
+
+      pre {
+        margin: 1rem 0;
+        line-height: 1.75rem;
+      }
+    }
+
+    .overlayContent {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: url("../images/portfolio-v1.jpg") no-repeat center
+        center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: rgb(255, 255, 255);
+      opacity: 0;
+      transition: opacity 0.25s ease-in;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      > h1,
+      pre {
+        width: 80%;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      > h1 {
+        font-size: 2rem;
+      }
+      > pre {
+        margin-top: 0.25rem;
+        font-size: 1.25rem;
+      }
+
+      .projectOptions {
+        display: flex;
+        a {
+          all: unset;
+          height: 3.25rem;
+          width: 12rem;
+          background: white;
+          color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid black;
+          border-radius: 5px;
+          margin: 3rem 1rem;
+          transition: all 0.25s ease;
+
+          &:hover {
+            cursor: pointer;
+            border-color: white;
+            color: white;
+            background: black;
+          }
+        }
+      }
+    }
+  }
+}
