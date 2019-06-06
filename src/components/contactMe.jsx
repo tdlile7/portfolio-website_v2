@@ -93,6 +93,14 @@ const ContactMe = () => {
     };
   });
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    // Wait the duration of the entire submit form animation before actually submitting form
+    setTimeout(() => {
+      contactForm.current.submit();
+    }, 8000);
+  };
+
   return (
     <div ref={contactMe} id="contactMe">
       <button className="openFormBtn" ref={openFormBtn}>
@@ -125,12 +133,16 @@ const ContactMe = () => {
             <FontAwesomeIcon className="icon" icon={faComment} />
             <textarea name="message" placeholder="message" />
           </div>
-          <button ref={sendFormBtn} className="sendFormBtn">
+          <button
+            ref={sendFormBtn}
+            className="sendFormBtn"
+            onClick={handleSubmit}
+          >
             Send
           </button>
         </form>
         <p ref={postSubmitMessage} class="postSubmitMessage">
-          Message has been submitted!
+          Message ready for final check!
         </p>
       </div>
       <svg
