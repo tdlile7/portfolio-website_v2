@@ -104,8 +104,9 @@ const ContactMe = () => {
         </div>
         <form
           ref={contactForm}
-          action="POST"
           className="contactForm"
+          name="contact"
+          method="POST"
           data-netlify="true"
         >
           <div class="inputGroup">
