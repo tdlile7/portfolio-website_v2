@@ -107,8 +107,7 @@ const ContactMe = () => {
           className="contactForm"
           name="contact"
           method="POST"
-          action="/"
-          data-netlify="true"
+          action="https://formspree.io/tlile1429@gmail.com"
         >
           <div class="inputGroup">
             <FontAwesomeIcon className="icon" icon={faUser} />
