@@ -107,6 +107,7 @@ const ContactMe = () => {
           className="contactForm"
           name="contact"
           method="POST"
+          action="/"
           data-netlify="true"
         >
           <div class="inputGroup">
